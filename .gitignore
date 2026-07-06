@@ -1,0 +1,9 @@
+# Internal source files — NOT for the public repo (any local JD exports or fit-analysis notes)
+sei_brainmap_data.json
+sei_brainmap_spec.md
+*_spec.md
+*_analysis*.md
+
+# OS cruft
+.DS_Store
+.claude/
