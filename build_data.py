@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generates data.json for the SEI fit-map page.
+"""Generates data.json for the SEI fit-map page (two roles, tabbed).
 Single source of truth: edit this, run `python3 build_data.py`, and data.json
 is rewritten. (Or just edit data.json directly — this is a convenience.)
 """
@@ -17,7 +17,7 @@ PF = {
     "ev-playbooks":         "https://www.hance.work/Platform-Design-Playbook-838ea8da681f4577bce28f0ea7e30b67?pvs=25",
 }
 
-# ---- Evidence (title + text shown to the reader) ----
+# ---- Evidence (title + text shown to the reader; shared across both roles) ----
 evidence = {
   # --- change management + adoption ---
   "ev-adoption": {"title": "2% to 26% adoption in two months", "text": "Took a Fortune 500's internal AI platform from 2% to 26% adoption in two months by building the playbook and training that got people to actually use it — before large-scale ChatGPT adoption, when 98% of licensed users couldn't operate the tool."},
@@ -53,6 +53,7 @@ evidence = {
   "ev-org-redesign": {"title": "Doubled revenue in three months", "text": "Redesigned my startup's organizational structure to detach the CEO from daily hands-on work — that doubled revenue and quadrupled headcount in three months, and the company later exited via a profitable sale."},
   "ev-eraf": {"title": "Kept the employees who were leaving", "text": "Crafted an ERAF map of 100+ interaction points after ethnographic research showed employees ready to quit over \"bad communication\" actually misunderstood the larger business model. Helping siloed teams see their role in the bigger system kept them — the problem was never communication."},
   "ev-playbooks": {"title": "I uncover and write the playbooks", "text": "An operations playbook that cut resource needs 60%, a startup playbook library that lifted efficiency 80% and removed the CEO from lower-level decisions, and a Fortune 500 AI strategy playbook shipped in 20+ languages."},
+  "ev-ops-reform": {"title": "A 60% resource reduction", "text": "Reformed the operational systems and org structure at a university logistics startup — a 100,000 square foot warehouse, a 20-truck fleet, and 200+ seasonal staff — then documented the new ways of working into the playbook that propagated across the other campuses. The reform drove a 60% resource reduction."},
   "ev-system-not-symptom": {"title": "I solve the system, not the symptom", "text": "I will spend an entire day on a single problem — solving the system instead of the symptom — because I know it will save days of time in the future."},
   "ev-parallel": {"title": "Bayer 9-to-5, startup 5-to-9", "text": "Built a startup to a profitable exit while working Bayer full time — Bayer was my 9-to-5, the startup was my 5-to-9. Two demanding roles, years of switching between them, and neither one dropped."},
 
@@ -81,8 +82,10 @@ for k, url in PF.items():
 def ph(pid, text, ev):
     return {"id": pid, "text": text, "evidence": ev}
 
-# ---- The job description, as real prose with inline highlighted phrases ----
-jd_prose = [
+# =====================================================================
+# ROLE 1 — Concept to Delivery Consultant
+# =====================================================================
+ctd_prose = [
   {"type": "h2", "text": "WHO WE LOOK FOR"},
   {"type": "p", "segments": [
     "An SEI-er is a ",
@@ -258,41 +261,254 @@ jd_prose = [
   {"type": "p", "segments": ["$160,000 - $190,000 USD"]},
 ]
 
+# =====================================================================
+# ROLE 2 — Strategy and Operations Consultant
+# =====================================================================
+so_prose = [
+  {"type": "h2", "text": "WHO WE LOOK FOR"},
+  {"type": "p", "segments": [
+    "An SEI-er is a ",
+    ph("so-communicator", "master communicator and active listener who understands how to navigate an audience",
+       ["ev-facilitation", "ev-writing", "ev-strengths-coach"]),
+    ". Self-aware, almost to a fault, SEI-ers keenly understand how to ",
+    ph("so-adjust", "adjust their support and problem solving based on the situation",
+       ["ev-strengths-coach", "ev-translator"]),
+    ". Following a logical, fact-based approach, SEI-ers possess the superior ability to ",
+    ph("so-correlations", "see correlations others may not, ask the right questions and drive solutions",
+       ["ev-eraf", "ev-system-not-symptom", "ev-service-blueprint"]),
+    "."
+  ]},
+  {"type": "p", "segments": [
+    "As super-connectors, they ",
+    ph("so-connector", "connect not only people, but data, trends and experiences",
+       ["ev-blueprint-global", "ev-bayer-journey", "ev-translator"]),
+    ". Mature, humble, and genuine, SEI-ers frequently go above and beyond for both their clients and their colleagues. SEI-ers are ethical and trustworthy individuals who ",
+    ph("so-follow-through", "consistently and repeatedly follow through",
+       ["ev-budgets", "ev-film-producer"]),
+    ", and hold true to their values in difficult situations. SEI-ers have an ",
+    ph("so-curiosity", "insatiable curiosity and love to learn",
+       ["ev-rd-lab", "ev-scad"]),
+    ". These individuals are commonly ",
+    ph("so-tech-savvy", "tech savvy and early adopters",
+       ["ev-agentic-personas", "ev-rd-lab", "ev-toolstack"]),
+    ". Their ",
+    ph("so-infectious", "passion for learning is infectious and excites others",
+       ["ev-adoption", "ev-facilitation"]),
+    ". As every project is different, an SEI-er must be ",
+    ph("so-adaptable", "adaptable and comfortable with unexpected situations",
+       ["ev-ad-replan", "ev-nexus", "ev-industries"]),
+    ". SEI-ers define ambition differently. They are authentic, low-maintenance individuals who truly enjoy one another- they like to hang out with colleagues outside of work, collaborate and hold one another accountable. SEI-ers enjoy working with genuine, thoughtful folks who want to steer clear of the traditional grind and share the joy of day-to-day life and activities with colleagues, friends, and family."
+  ]},
+
+  {"type": "h2", "text": "WHAT WE DO"},
+  {"type": "p", "segments": [
+    "Our Strategy and Operations consultants work with clients at all levels of the organization, ",
+    ph("so-all-levels", "from the C-suite to the shop floor",
+       ["ev-exec-alignment", "ev-nexus"]),
+    ", helping them to ",
+    ph("so-strategic-initiatives", "deliver on their most strategic initiatives",
+       ["ev-blueprint-global", "ev-delta-pm"]),
+    ". We’re known for ",
+    ph("so-data-driven", "making realistic, data-driven decisions that deliver value in tangible ways",
+       ["ev-service-blueprint", "ev-decision-tools"]),
+    " to our clients. Our clients ask for us on projects that require a ",
+    ph("so-combination", "superior combination of technical and business capabilities, people and management skills, and a collaborative mindset",
+       ["ev-translator", "ev-team-builder", "ev-parallel"]),
+    ". We excel in ",
+    ph("so-actionable", "understanding complex programs and strategic initiatives and breaking them into actionable pieces",
+       ["ev-ad-replan", "ev-playbooks"]),
+    "."
+  ]},
+  {"type": "p", "segments": [
+    "We work across a ",
+    ph("so-industries", "variety of industries and business functions",
+       ["ev-industries", "ev-13yrs"]),
+    " and provide depth and breadth of experience across a set of core capabilities:"
+  ]},
+  {"type": "li", "segments": [
+     {"b": "Strategy and Execution – "},
+     ph("so-strategy-execution", "Leverage quantitative and qualitative insights to inform strategic alignment, develop roadmaps, and define prioritization",
+        ["ev-site-rebuild", "ev-cdp", "ev-decision-tools"])]},
+  {"type": "li", "segments": [
+     {"b": "Process Improvement - "},
+     ph("so-process-improvement", "Work with decision-makers to understand organizational goals, process gaps, and make and implement recommendations",
+        ["ev-ops-reform", "ev-bayer-journey"])]},
+  {"type": "li", "segments": [
+     {"b": "Operational Transformation - "},
+     ph("so-op-transformation", "Leverage data-based strategies to define organizational goals, identify performance gaps, advise on closing gaps, predict future demand, and lead transformation initiatives",
+        ["ev-org-redesign", "ev-dryland-scale"])]},
+  {"type": "li", "segments": [
+     {"b": "Organizational Design – "},
+     ph("so-org-design", "Ensure effective alignment of skills and responsibilities, spans and layers, governance, and communication across an organization",
+        ["ev-franchise", "ev-org-redesign", "ev-eraf"])]},
+  {"type": "li", "segments": [
+     {"b": "Mergers and Acquisitions – "},
+     "work with organizations to identify, plan, and lead post M&A integration activities."]},
+  {"type": "p", "segments": [
+    "We ",
+    ph("so-close-gaps", "close gaps to create unparalleled opportunities for innovation",
+       ["ev-site-rebuild", "ev-blueprint-global"]),
+    ". We ",
+    ph("so-blueprints", "develop and execute strategic blueprints",
+       ["ev-service-blueprint", "ev-blueprint-global"]),
+    ", ",
+    ph("so-transformations", "facilitate, and lead large-scale transformations",
+       ["ev-franchise", "ev-bayer-journey"]),
+    ", and ",
+    ph("so-op-effectiveness", "increase operational effectiveness",
+       ["ev-playbooks", "ev-ops-reform"]),
+    " with an approach centered on agility and collaboration. Our goal is simple: to position our clients as leaders within their sectors."
+  ]},
+  {"type": "p", "segments": ["The ideal candidate’s experience may include but is not limited to the following:"]},
+  {"type": "li", "segments": [
+    "Have experience ",
+    ph("so-real-problems-li", "understanding and solving real business problems",
+       ["ev-eraf", "ev-franchise"]),
+    ]},
+  {"type": "li", "segments": [
+    "Have experience with ",
+    ph("so-c-suite", "presenting business case and strategy to the C-Suite",
+       ["ev-exec-alignment", "ev-delta-pm"]),
+    ]},
+  {"type": "li", "segments": [
+    "Have experience in ",
+    ph("so-assessments", "conducting assessments in different areas that allow organizations a map of where they are and where they may want to go",
+       ["ev-service-blueprint", "ev-bayer-journey", "ev-eraf"]),
+    ]},
+  {"type": "li", "segments": [
+    ph("so-root-causes", "Identifying and addressing root causes of operational and strategic issues in organizational and governance structures",
+       ["ev-eraf", "ev-system-not-symptom", "ev-org-redesign"]),
+    "."]},
+  {"type": "li", "segments": [
+    ph("so-process-initiative", "Led a process improvement initiative, facilitating Current State and Future State documentation, performing a Gap Analysis and creating a plan to achieve desired Future State vision",
+       ["ev-ops-reform", "ev-franchise", "ev-blueprint-global"]),
+    "."]},
+  {"type": "li", "segments": [
+    "Been a part of standing up a post merger Integration Management Office and worked leading activities related to 2 organizations coming together"]},
+  {"type": "p", "segments": [
+    "A career at SEI extends well beyond providing great service and thought leadership to our clients. Everyone takes an active role in building and managing our business, in an environment that runs counter to traditional consulting firms. Our consultants have a “seat at the table” and contribute to growing our business in ways that align to their interests such as growing ",
+    ph("so-bizdev", "business development opportunities",
+       ["ev-agsage-bizdev"]),
+    ", ",
+    ph("so-interviews", "conducting interviews to support our hiring process",
+       ["ev-hiring"]),
+    ", managing internal initiatives that build our brand or ",
+    ph("so-trainings", "organizing trainings to share what you know",
+       ["ev-ai-playbook", "ev-training-camp"]),
+    " with your colleagues. There is no telling what an SEI Consultant will be asked to do on a day-to-day basis – we ",
+    ph("so-job-done", "do what it takes to get the job done",
+       ["ev-parallel", "ev-nexus"]),
+    "."
+  ]},
+
+  {"type": "h2", "text": "QUALIFICATIONS"},
+  {"type": "h3", "text": "Required"},
+  {"type": "li", "segments": ["Alignment to our core values: Excellence, Participation, Integrity, and Collaboration"]},
+  {"type": "li", "segments": ["Hungry, Humble, Smart"]},
+  {"type": "li", "segments": [
+     ph("so-acumen", "Demonstrated business and technology acumen",
+        ["ev-cdp", "ev-translator", "ev-scad"])]},
+  {"type": "li", "segments": [
+     ph("so-comms", "Strong written and verbal communication skills",
+        ["ev-writing", "ev-facilitation"])]},
+  {"type": "li", "segments": [
+     ph("so-real-problems", "Understanding and experience solving real business problems",
+        ["ev-eraf", "ev-franchise", "ev-org-redesign"])]},
+  {"type": "li", "segments": [
+     ph("so-results", "Proven track record of delivering results",
+        ["ev-org-redesign", "ev-adoption", "ev-site-rebuild"])]},
+  {"type": "li", "segments": [
+     ph("so-team", "Experience working with and/or leading a team",
+        ["ev-team-builder", "ev-delta-pm", "ev-hiring"])]},
+  {"type": "li", "segments": [
+     ph("so-across", "Ability to work across industries, roles, functions & technologies",
+        ["ev-industries", "ev-toolstack"])]},
+  {"type": "li", "segments": ["Authorization for permanent employment in the United States (this position is not eligible for immigration sponsorship)"]},
+
+  {"type": "h3", "text": "Preferred"},
+  {"type": "li", "segments": [
+     ph("so-degree", "Bachelor’s degree",
+        ["ev-scad"])]},
+  {"type": "li", "segments": [
+     ph("so-years", "8+ years professional experience",
+        ["ev-13yrs"])]},
+  {"type": "li", "segments": [
+     ph("so-offerings", "Experience across our service offerings",
+        ["ev-decision-tools", "ev-ops-reform", "ev-org-redesign", "ev-service-blueprint"])]},
+
+  {"type": "p", "segments": [
+    "In compliance with the Massachusetts Transparency Law: This range below is an estimate depending on location, hours, operational needs, education, training, skills, and experience. This job may also be eligible for a discretionary bonus. SEI provides a variety of benefits to employees, including health insurance, dental insurance, vision insurance, a 401(k)-retirement plan, disability insurance, life insurance, paid holidays, paid time off, and paid parental leave benefits."
+  ]},
+  {"type": "h2", "text": "Boston Pay Range"},
+  {"type": "p", "segments": ["$160,000 - $190,000 USD"]},
+]
+
+LEDE = "These are selected notes and resume points from Ryan Hance's career experience mapped to SEI's actual job descriptions. Both Boston roles are mapped — use the tabs above to switch between them."
+
 data = {
   "meta": {
     "candidate": "Ryan Hance",
     "portfolio": "https://www.hance.work/",
-    "note": "Pure renderer input. Edit copy here (or in build_data.py). Each highlighted phrase carries the evidence ids that back it; evidence is a shared dictionary."
+    "note": "Pure renderer input. Edit copy here (or in build_data.py). Each highlighted phrase carries the evidence ids that back it; evidence is a shared dictionary. Each entry in roles is one tab."
   },
-  "job": {
-    "company": "SEI",
-    "role": "Concept to Delivery Consultant",
-    "employment": "",
-    "location": "Boston, Massachusetts",
-    "url": "https://www.sei.com/careers/open-positions/job-position-detail/?gh_jid=4087807005",
-    "tab_title": "Ryan Hance · Fit Map",
-    "candidate_kicker": "Ryan Hance · Fit Map",
-    "candidate_lede": "These are selected notes and resume points from Ryan Hance's career experience mapped to the actual SEI job description.",
-    "candidate_stat": "Hover over any underlined phrase and select it to see Ryan's experience related to the ask.",
-  },
+  "roles": [
+    {
+      "id": "ctd",
+      "tab_label": "Concept to Delivery",
+      "job": {
+        "company": "SEI",
+        "role": "Concept to Delivery Consultant",
+        "employment": "",
+        "location": "Boston, Massachusetts",
+        "url": "https://www.sei.com/careers/open-positions/job-position-detail/?gh_jid=4087807005",
+        "tab_title": "Ryan Hance · Fit Map",
+        "candidate_kicker": "Ryan Hance · Fit Map",
+        "candidate_lede": LEDE,
+        "candidate_stat": "Hover over any underlined phrase and select it to see Ryan's experience related to the ask.",
+      },
+      "jd_prose": ctd_prose,
+    },
+    {
+      "id": "so",
+      "tab_label": "Strategy and Operations",
+      "job": {
+        "company": "SEI",
+        "role": "Strategy and Operations Consultant",
+        "employment": "",
+        "location": "Boston, Massachusetts",
+        "url": "https://www.sei.com/careers/open-positions/job-position-detail/?gh_jid=4087819005",
+        "tab_title": "Ryan Hance · Fit Map",
+        "candidate_kicker": "Ryan Hance · Fit Map",
+        "candidate_lede": LEDE,
+        "candidate_stat": "Hover over any underlined phrase and select it to see Ryan's experience related to the ask.",
+      },
+      "jd_prose": so_prose,
+    },
+  ],
   "evidence": evidence,
-  "jd_prose": jd_prose,
 }
 
 out = os.path.join(HERE, "data.json")
 with open(out, "w") as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
 
-# quick self-check: every referenced evidence id exists
+# quick self-check: every referenced evidence id exists; phrase ids unique across roles
 ids = set()
-for b in jd_prose:
-    for seg in b.get("segments", []):
-        if isinstance(seg, dict) and "evidence" in seg:
-            ids.update(seg["evidence"])
+phrase_ids = []
+for role in data["roles"]:
+    for b in role["jd_prose"]:
+        for seg in b.get("segments", []):
+            if isinstance(seg, dict) and "evidence" in seg:
+                ids.update(seg["evidence"])
+                phrase_ids.append(seg["id"])
 missing = [i for i in ids if i not in evidence]
+dupes = sorted({p for p in phrase_ids if phrase_ids.count(p) > 1})
 print("Wrote", out)
-print("phrases:", sum(1 for b in jd_prose for s in b.get("segments", []) if isinstance(s, dict) and "id" in s))
+for role in data["roles"]:
+    n = sum(1 for b in role["jd_prose"] for s in b.get("segments", []) if isinstance(s, dict) and "id" in s)
+    print(f"  {role['id']}: {n} phrases")
 print("evidence items:", len(evidence))
 print("missing evidence refs:", missing or "none")
+print("duplicate phrase ids:", dupes or "none")
 unused = [k for k in evidence if k not in ids]
 print("unused evidence:", unused or "none")

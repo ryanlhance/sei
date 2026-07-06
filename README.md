@@ -1,6 +1,6 @@
 # SEI Fit Map
 
-A single, shareable web page that shows the **SEI Concept to Delivery Consultant job description exactly as posted** — and lets a reader hover any highlighted phrase (it visibly becomes clickable) and click it to see the **specific, real experience** that backs it.
+A single, shareable web page that shows **two SEI Boston job descriptions exactly as posted** — Concept to Delivery Consultant and Strategy and Operations Consultant, switchable via tabs at the top — and lets a reader hover any highlighted phrase (it visibly becomes clickable) and click it to see the **specific, real experience** that backs it.
 
 The intent: hand a hiring manager one link that proves fit, phrase by phrase, without them ever seeing anything behind the curtain.
 
@@ -26,13 +26,14 @@ That rewrites `data.json` for you and prints a sanity check (phrase count + any 
 
 ### How the content is organized
 
-- **`evidence`** — a dictionary of your accomplishments. Each has a `title`, a `text`, and (for portfolio pieces) a `link`. One piece of evidence can back many phrases.
-- **`jd_prose`** — the job description itself, in order, as a list of blocks:
-  - `{"type": "p", ...}` — a paragraph
-  - `{"type": "h2"/"h3", "text": "..."}` — a section heading
-  - `{"type": "li", ...}` — a bullet
-  - Inside a paragraph or bullet, plain text is just text; a **highlighted phrase** is an object with its own `text` and an `evidence` list of ids. That's what becomes clickable.
-- **`job`** — the role title, location, the link to the job board, the browser-tab title, and the short "Ryan Hance · Fit Map" framing line at the top.
+- **`evidence`** — a dictionary of your accomplishments, shared by both roles. Each has a `title`, a `text`, and (for portfolio pieces) a `link`. One piece of evidence can back many phrases, in either role.
+- **`roles`** — one entry per tab. Each role has an `id`, a `tab_label`, a `job` block, and its own `jd_prose`:
+  - **`job`** — the role title, location, the link to the job board, the browser-tab title, and the short "Ryan Hance · Fit Map" framing line at the top.
+  - **`jd_prose`** — the job description itself, in order, as a list of blocks:
+    - `{"type": "p", ...}` — a paragraph
+    - `{"type": "h2"/"h3", "text": "..."}` — a section heading
+    - `{"type": "li", ...}` — a bullet
+    - Inside a paragraph or bullet, plain text is just text; a **highlighted phrase** is an object with its own `text` and an `evidence` list of ids. That's what becomes clickable. Phrase ids must be unique across both roles (deep links use them to pick the right tab).
 
 **To add a new proof point:** add an entry to `evidence`, then add its id to the `evidence` list of whichever phrase(s) it backs. It shows up automatically — no code change.
 
@@ -40,10 +41,10 @@ That rewrites `data.json` for you and prints a sanity check (phrase count + any 
 
 ## What's on the page
 
-- The real SEI posting: **WHO WE LOOK FOR**, **WHAT WE DO**, **QUALIFICATIONS**, and the **Boston Pay Range** — styled to feel like SEI's own site (logo, ivory-and-ink palette, serif headlines, signature red accents).
+- **Two tabs**, one per SEI role, each showing that posting's real text: **WHO WE LOOK FOR**, **WHAT WE DO**, **QUALIFICATIONS**, and the **Boston Pay Range** — styled to feel like SEI's own site (logo, ivory-and-ink palette, serif headlines, signature red accents). Each tab's "View the live posting" link goes to that role's posting.
 - **Highlighted phrases** you can hover (they show a "clickable" cue) and click.
 - A **side panel** (right on desktop, a bottom sheet on phones) that opens with the evidence behind the clicked phrase — an accomplishment title, the story, and a link to the case study when there is one.
-- A **shareable deep link:** click a phrase and the address bar updates (e.g. `…/#p-tech-savvy`); sending that link opens the page with that phrase already expanded.
+- A **shareable deep link:** click a phrase and the address bar updates (e.g. `…/#p-tech-savvy`); sending that link opens the page on the right tab with that phrase already expanded. A bare role id (e.g. `…/#so`) opens that tab.
 
 ---
 

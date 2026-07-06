@@ -2,19 +2,1202 @@
   "meta": {
     "candidate": "Ryan Hance",
     "portfolio": "https://www.hance.work/",
-    "note": "Pure renderer input. Edit copy here (or in build_data.py). Each highlighted phrase carries the evidence ids that back it; evidence is a shared dictionary."
+    "note": "Pure renderer input. Edit copy here (or in build_data.py). Each highlighted phrase carries the evidence ids that back it; evidence is a shared dictionary. Each entry in roles is one tab."
   },
-  "job": {
-    "company": "SEI",
-    "role": "Concept to Delivery Consultant",
-    "employment": "",
-    "location": "Boston, Massachusetts",
-    "url": "https://www.sei.com/careers/open-positions/job-position-detail/?gh_jid=4087807005",
-    "tab_title": "Ryan Hance · Fit Map",
-    "candidate_kicker": "Ryan Hance · Fit Map",
-    "candidate_lede": "These are selected notes and resume points from Ryan Hance's career experience mapped to the actual SEI job description.",
-    "candidate_stat": "Hover over any underlined phrase and select it to see Ryan's experience related to the ask."
-  },
+  "roles": [
+    {
+      "id": "ctd",
+      "tab_label": "Concept to Delivery",
+      "job": {
+        "company": "SEI",
+        "role": "Concept to Delivery Consultant",
+        "employment": "",
+        "location": "Boston, Massachusetts",
+        "url": "https://www.sei.com/careers/open-positions/job-position-detail/?gh_jid=4087807005",
+        "tab_title": "Ryan Hance · Fit Map",
+        "candidate_kicker": "Ryan Hance · Fit Map",
+        "candidate_lede": "These are selected notes and resume points from Ryan Hance's career experience mapped to SEI's actual job descriptions. Both Boston roles are mapped — use the tabs above to switch between them.",
+        "candidate_stat": "Hover over any underlined phrase and select it to see Ryan's experience related to the ask."
+      },
+      "jd_prose": [
+        {
+          "type": "h2",
+          "text": "WHO WE LOOK FOR"
+        },
+        {
+          "type": "p",
+          "segments": [
+            "An SEI-er is a ",
+            {
+              "id": "p-communicator",
+              "text": "master communicator and active listener who understands how to navigate an audience",
+              "evidence": [
+                "ev-facilitation",
+                "ev-writing",
+                "ev-strengths-coach"
+              ]
+            },
+            ". Self-aware, almost to a fault, SEI-ers keenly understand how to ",
+            {
+              "id": "p-adjust",
+              "text": "adjust their support and problem solving based on the situation",
+              "evidence": [
+                "ev-strengths-coach",
+                "ev-translator"
+              ]
+            },
+            ". Following a logical, fact-based approach, SEI-ers possess the superior ability to ",
+            {
+              "id": "p-correlations",
+              "text": "see correlations others may not, ask the right questions and drive solutions",
+              "evidence": [
+                "ev-eraf",
+                "ev-system-not-symptom",
+                "ev-service-blueprint"
+              ]
+            },
+            "."
+          ]
+        },
+        {
+          "type": "p",
+          "segments": [
+            "As super-connectors, they ",
+            {
+              "id": "p-connector",
+              "text": "connect not only people, but data, trends and experiences",
+              "evidence": [
+                "ev-blueprint-global",
+                "ev-bayer-journey",
+                "ev-translator"
+              ]
+            },
+            ". Mature, humble, and genuine, SEI-ers frequently go above and beyond for both their clients and their colleagues. SEI-ers are ethical and trustworthy individuals who ",
+            {
+              "id": "p-follow-through",
+              "text": "consistently and repeatedly follow through",
+              "evidence": [
+                "ev-budgets",
+                "ev-film-producer"
+              ]
+            },
+            ", and hold true to their values in difficult situations. SEI-ers have an ",
+            {
+              "id": "p-curiosity",
+              "text": "insatiable curiosity and love to learn",
+              "evidence": [
+                "ev-rd-lab",
+                "ev-scad"
+              ]
+            },
+            ". These individuals are commonly ",
+            {
+              "id": "p-tech-savvy",
+              "text": "tech savvy and early adopters",
+              "evidence": [
+                "ev-agentic-personas",
+                "ev-rd-lab",
+                "ev-toolstack"
+              ]
+            },
+            ". Their ",
+            {
+              "id": "p-infectious",
+              "text": "passion for learning is infectious and excites others",
+              "evidence": [
+                "ev-adoption",
+                "ev-facilitation"
+              ]
+            },
+            ". As every project is different, an SEI-er must be ",
+            {
+              "id": "p-adaptable",
+              "text": "adaptable and comfortable with unexpected situations",
+              "evidence": [
+                "ev-ad-replan",
+                "ev-nexus",
+                "ev-industries"
+              ]
+            },
+            ". SEI-ers define ambition differently. They are authentic, low-maintenance individuals who truly enjoy one another- they like to hang out with colleagues outside of work, collaborate and hold one another accountable. SEI-ers enjoy working with genuine, thoughtful folks who want to steer clear of the traditional grind and share the joy of day-to-day life and activities with colleagues, friends, and family."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "WHAT WE DO"
+        },
+        {
+          "type": "p",
+          "segments": [
+            "Our Concept to Delivery consultants work with clients to ",
+            {
+              "id": "p-ideas-to-reality",
+              "text": "turn ideas into reality",
+              "evidence": [
+                "ev-bananas",
+                "ev-agentic-personas",
+                "ev-eaas"
+              ]
+            },
+            ". No matter the size or complexity, our consultants are skilled at ",
+            {
+              "id": "p-concepts-to-results",
+              "text": "helping clients transform concepts into tangible, impactful results",
+              "evidence": [
+                "ev-dryland-scale",
+                "ev-playbooks",
+                "ev-franchise"
+              ]
+            },
+            ". We do this by utilizing innovative approaches to design and deliver engaging, value-focused solutions. Our Concept to Delivery approach demands a ",
+            {
+              "id": "p-people-centric",
+              "text": "people-centric mindset",
+              "evidence": [
+                "ev-scad",
+                "ev-bayer-journey"
+              ]
+            },
+            ", fail-fast mentality, ",
+            {
+              "id": "p-nimble",
+              "text": "nimble decision making",
+              "evidence": [
+                "ev-nexus",
+                "ev-highstakes"
+              ]
+            },
+            ", steadfast innovation, and engaging ",
+            {
+              "id": "p-cross-functional",
+              "text": "cross-functional collaboration",
+              "evidence": [
+                "ev-delta-pm",
+                "ev-translator"
+              ]
+            },
+            "."
+          ]
+        },
+        {
+          "type": "p",
+          "segments": [
+            "We work across a ",
+            {
+              "id": "p-industries",
+              "text": "variety of industries and business functions",
+              "evidence": [
+                "ev-industries",
+                "ev-13yrs"
+              ]
+            },
+            " and provide depth and breadth of experience across numerous strategic capabilities."
+          ]
+        },
+        {
+          "type": "p",
+          "segments": [
+            "We are actively looking for professionals in the following areas:"
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-design-thinking",
+              "text": "Design Thinking",
+              "evidence": [
+                "ev-facilitation",
+                "ev-scad",
+                "ev-decision-tools"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-rapid-prototyping",
+              "text": "Rapid Prototyping",
+              "evidence": [
+                "ev-agentic-personas",
+                "ev-bananas"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-product-management",
+              "text": "Product Management",
+              "evidence": [
+                "ev-site-rebuild",
+                "ev-eaas",
+                "ev-delta-pm"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-solution-delivery",
+              "text": "Solution Delivery",
+              "evidence": [
+                "ev-film-producer",
+                "ev-budgets",
+                "ev-13yrs"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-change-management",
+              "text": "Change Management",
+              "evidence": [
+                "ev-adoption",
+                "ev-franchise",
+                "ev-training-camp"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "segments": [
+            "The ideal candidate’s experience will include elements of the following:"
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Providing ",
+            {
+              "id": "p-delivery-leadership",
+              "text": "delivery leadership, and executing on large scale, highly complex initiatives",
+              "evidence": [
+                "ev-blueprint-global",
+                "ev-delta-pm",
+                "ev-film-producer"
+              ]
+            },
+            " by ",
+            {
+              "id": "p-aligning-stakeholders",
+              "text": "aligning key stakeholders, working across various levels of the organization",
+              "evidence": [
+                "ev-exec-alignment",
+                "ev-translator"
+              ]
+            },
+            ", and ",
+            {
+              "id": "p-business-results",
+              "text": "driving business results",
+              "evidence": [
+                "ev-org-redesign",
+                "ev-site-rebuild"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Leveraging ",
+            {
+              "id": "p-dt-methods",
+              "text": "design thinking methods to facilitate, articulate, and align on problem definition and solution design",
+              "evidence": [
+                "ev-facilitation",
+                "ev-franchise",
+                "ev-decision-tools"
+              ]
+            },
+            " among business leads, relevant stakeholders, and oftentimes customers."
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Developing and adding further detail and fidelity to ",
+            {
+              "id": "p-prototyping",
+              "text": "envisioned solutions through prototyping",
+              "evidence": [
+                "ev-agentic-personas",
+                "ev-bananas"
+              ]
+            },
+            ", often working with the same stakeholders, by leveraging an ",
+            {
+              "id": "p-agile-feedback",
+              "text": "agile approach towards feedback",
+              "evidence": [
+                "ev-scrumboard",
+                "ev-site-rebuild"
+              ]
+            },
+            " to deliver quickly while meeting product goals."
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Managing the ",
+            {
+              "id": "p-product-lifecycle",
+              "text": "product lifecycle (e.g., vision, roadmap, budget, pricing, development)",
+              "evidence": [
+                "ev-eaas",
+                "ev-site-rebuild",
+                "ev-agsage-bizdev"
+              ]
+            },
+            ", often by leveraging the collective functions of an enterprise, to deliver solutions that maximize value and minimize time to delivery."
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Enabling organizations and its people to ",
+            {
+              "id": "p-adopt-champion",
+              "text": "embrace, adopt, and champion new solutions",
+              "evidence": [
+                "ev-adoption",
+                "ev-ai-playbook",
+                "ev-eraf"
+              ]
+            },
+            " by leveraging effective ",
+            {
+              "id": "p-change-strategies",
+              "text": "change management strategies and methodologies",
+              "evidence": [
+                "ev-training-camp",
+                "ev-franchise"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "segments": [
+            "A career at SEI extends well beyond providing great service and thought leadership to our clients. Everyone takes an active role in building and managing our business, in an environment that runs counter to traditional consulting firms. Our consultants have a “seat at the table” and contribute to growing our business in ways that align to their interests such as growing ",
+            {
+              "id": "p-bizdev",
+              "text": "business development opportunities",
+              "evidence": [
+                "ev-agsage-bizdev"
+              ]
+            },
+            ", ",
+            {
+              "id": "p-interviews",
+              "text": "conducting interviews to support our hiring process",
+              "evidence": [
+                "ev-hiring"
+              ]
+            },
+            ", managing internal initiatives that build our brand or ",
+            {
+              "id": "p-trainings",
+              "text": "organizing trainings to share what you know",
+              "evidence": [
+                "ev-ai-playbook",
+                "ev-training-camp"
+              ]
+            },
+            " with your colleagues. There is no telling what an SEI Consultant will be asked to do on a day-to-day basis – we ",
+            {
+              "id": "p-job-done",
+              "text": "do what it takes to get the job done",
+              "evidence": [
+                "ev-parallel",
+                "ev-nexus"
+              ]
+            },
+            "."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "QUALIFICATIONS"
+        },
+        {
+          "type": "h3",
+          "text": "Required"
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Alignment to our core values: Excellence, Participation, Integrity, and Collaboration"
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Hungry, Humble, Smart"
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-acumen",
+              "text": "Demonstrated business and technology acumen",
+              "evidence": [
+                "ev-cdp",
+                "ev-translator",
+                "ev-scad"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-comms",
+              "text": "Strong written and verbal communication skills",
+              "evidence": [
+                "ev-writing",
+                "ev-facilitation"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-real-problems",
+              "text": "Understanding and experience solving real business problems",
+              "evidence": [
+                "ev-eraf",
+                "ev-franchise",
+                "ev-org-redesign"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-results",
+              "text": "Proven track record of delivering results",
+              "evidence": [
+                "ev-org-redesign",
+                "ev-adoption",
+                "ev-site-rebuild"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-team",
+              "text": "Experience working with and/or leading a team",
+              "evidence": [
+                "ev-team-builder",
+                "ev-delta-pm",
+                "ev-hiring"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-across",
+              "text": "Ability to work across industries, roles, functions & technologies",
+              "evidence": [
+                "ev-industries",
+                "ev-toolstack"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Authorization for permanent employment in the United States (this position is not eligible for immigration sponsorship)"
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Preferred"
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-degree",
+              "text": "Bachelor’s degree",
+              "evidence": [
+                "ev-scad"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-years",
+              "text": "8+ years professional experience",
+              "evidence": [
+                "ev-13yrs"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "p-offerings",
+              "text": "Experience across our service offerings",
+              "evidence": [
+                "ev-facilitation",
+                "ev-agentic-personas",
+                "ev-eaas",
+                "ev-film-producer",
+                "ev-adoption"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "segments": [
+            "In compliance with the Massachusetts Transparency Law: This range below is an estimate depending on location, hours, operational needs, education, training, skills, and experience. This job may also be eligible for a discretionary bonus. SEI provides a variety of benefits to employees, including health insurance, dental insurance, vision insurance, a 401(k)-retirement plan, disability insurance, life insurance, paid holidays, paid time off, and paid parental leave benefits."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Boston Pay Range"
+        },
+        {
+          "type": "p",
+          "segments": [
+            "$160,000 - $190,000 USD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "so",
+      "tab_label": "Strategy and Operations",
+      "job": {
+        "company": "SEI",
+        "role": "Strategy and Operations Consultant",
+        "employment": "",
+        "location": "Boston, Massachusetts",
+        "url": "https://www.sei.com/careers/open-positions/job-position-detail/?gh_jid=4087819005",
+        "tab_title": "Ryan Hance · Fit Map",
+        "candidate_kicker": "Ryan Hance · Fit Map",
+        "candidate_lede": "These are selected notes and resume points from Ryan Hance's career experience mapped to SEI's actual job descriptions. Both Boston roles are mapped — use the tabs above to switch between them.",
+        "candidate_stat": "Hover over any underlined phrase and select it to see Ryan's experience related to the ask."
+      },
+      "jd_prose": [
+        {
+          "type": "h2",
+          "text": "WHO WE LOOK FOR"
+        },
+        {
+          "type": "p",
+          "segments": [
+            "An SEI-er is a ",
+            {
+              "id": "so-communicator",
+              "text": "master communicator and active listener who understands how to navigate an audience",
+              "evidence": [
+                "ev-facilitation",
+                "ev-writing",
+                "ev-strengths-coach"
+              ]
+            },
+            ". Self-aware, almost to a fault, SEI-ers keenly understand how to ",
+            {
+              "id": "so-adjust",
+              "text": "adjust their support and problem solving based on the situation",
+              "evidence": [
+                "ev-strengths-coach",
+                "ev-translator"
+              ]
+            },
+            ". Following a logical, fact-based approach, SEI-ers possess the superior ability to ",
+            {
+              "id": "so-correlations",
+              "text": "see correlations others may not, ask the right questions and drive solutions",
+              "evidence": [
+                "ev-eraf",
+                "ev-system-not-symptom",
+                "ev-service-blueprint"
+              ]
+            },
+            "."
+          ]
+        },
+        {
+          "type": "p",
+          "segments": [
+            "As super-connectors, they ",
+            {
+              "id": "so-connector",
+              "text": "connect not only people, but data, trends and experiences",
+              "evidence": [
+                "ev-blueprint-global",
+                "ev-bayer-journey",
+                "ev-translator"
+              ]
+            },
+            ". Mature, humble, and genuine, SEI-ers frequently go above and beyond for both their clients and their colleagues. SEI-ers are ethical and trustworthy individuals who ",
+            {
+              "id": "so-follow-through",
+              "text": "consistently and repeatedly follow through",
+              "evidence": [
+                "ev-budgets",
+                "ev-film-producer"
+              ]
+            },
+            ", and hold true to their values in difficult situations. SEI-ers have an ",
+            {
+              "id": "so-curiosity",
+              "text": "insatiable curiosity and love to learn",
+              "evidence": [
+                "ev-rd-lab",
+                "ev-scad"
+              ]
+            },
+            ". These individuals are commonly ",
+            {
+              "id": "so-tech-savvy",
+              "text": "tech savvy and early adopters",
+              "evidence": [
+                "ev-agentic-personas",
+                "ev-rd-lab",
+                "ev-toolstack"
+              ]
+            },
+            ". Their ",
+            {
+              "id": "so-infectious",
+              "text": "passion for learning is infectious and excites others",
+              "evidence": [
+                "ev-adoption",
+                "ev-facilitation"
+              ]
+            },
+            ". As every project is different, an SEI-er must be ",
+            {
+              "id": "so-adaptable",
+              "text": "adaptable and comfortable with unexpected situations",
+              "evidence": [
+                "ev-ad-replan",
+                "ev-nexus",
+                "ev-industries"
+              ]
+            },
+            ". SEI-ers define ambition differently. They are authentic, low-maintenance individuals who truly enjoy one another- they like to hang out with colleagues outside of work, collaborate and hold one another accountable. SEI-ers enjoy working with genuine, thoughtful folks who want to steer clear of the traditional grind and share the joy of day-to-day life and activities with colleagues, friends, and family."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "WHAT WE DO"
+        },
+        {
+          "type": "p",
+          "segments": [
+            "Our Strategy and Operations consultants work with clients at all levels of the organization, ",
+            {
+              "id": "so-all-levels",
+              "text": "from the C-suite to the shop floor",
+              "evidence": [
+                "ev-exec-alignment",
+                "ev-nexus"
+              ]
+            },
+            ", helping them to ",
+            {
+              "id": "so-strategic-initiatives",
+              "text": "deliver on their most strategic initiatives",
+              "evidence": [
+                "ev-blueprint-global",
+                "ev-delta-pm"
+              ]
+            },
+            ". We’re known for ",
+            {
+              "id": "so-data-driven",
+              "text": "making realistic, data-driven decisions that deliver value in tangible ways",
+              "evidence": [
+                "ev-service-blueprint",
+                "ev-decision-tools"
+              ]
+            },
+            " to our clients. Our clients ask for us on projects that require a ",
+            {
+              "id": "so-combination",
+              "text": "superior combination of technical and business capabilities, people and management skills, and a collaborative mindset",
+              "evidence": [
+                "ev-translator",
+                "ev-team-builder",
+                "ev-parallel"
+              ]
+            },
+            ". We excel in ",
+            {
+              "id": "so-actionable",
+              "text": "understanding complex programs and strategic initiatives and breaking them into actionable pieces",
+              "evidence": [
+                "ev-ad-replan",
+                "ev-playbooks"
+              ]
+            },
+            "."
+          ]
+        },
+        {
+          "type": "p",
+          "segments": [
+            "We work across a ",
+            {
+              "id": "so-industries",
+              "text": "variety of industries and business functions",
+              "evidence": [
+                "ev-industries",
+                "ev-13yrs"
+              ]
+            },
+            " and provide depth and breadth of experience across a set of core capabilities:"
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "b": "Strategy and Execution – "
+            },
+            {
+              "id": "so-strategy-execution",
+              "text": "Leverage quantitative and qualitative insights to inform strategic alignment, develop roadmaps, and define prioritization",
+              "evidence": [
+                "ev-site-rebuild",
+                "ev-cdp",
+                "ev-decision-tools"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "b": "Process Improvement - "
+            },
+            {
+              "id": "so-process-improvement",
+              "text": "Work with decision-makers to understand organizational goals, process gaps, and make and implement recommendations",
+              "evidence": [
+                "ev-ops-reform",
+                "ev-bayer-journey"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "b": "Operational Transformation - "
+            },
+            {
+              "id": "so-op-transformation",
+              "text": "Leverage data-based strategies to define organizational goals, identify performance gaps, advise on closing gaps, predict future demand, and lead transformation initiatives",
+              "evidence": [
+                "ev-org-redesign",
+                "ev-dryland-scale"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "b": "Organizational Design – "
+            },
+            {
+              "id": "so-org-design",
+              "text": "Ensure effective alignment of skills and responsibilities, spans and layers, governance, and communication across an organization",
+              "evidence": [
+                "ev-franchise",
+                "ev-org-redesign",
+                "ev-eraf"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "b": "Mergers and Acquisitions – "
+            },
+            "work with organizations to identify, plan, and lead post M&A integration activities."
+          ]
+        },
+        {
+          "type": "p",
+          "segments": [
+            "We ",
+            {
+              "id": "so-close-gaps",
+              "text": "close gaps to create unparalleled opportunities for innovation",
+              "evidence": [
+                "ev-site-rebuild",
+                "ev-blueprint-global"
+              ]
+            },
+            ". We ",
+            {
+              "id": "so-blueprints",
+              "text": "develop and execute strategic blueprints",
+              "evidence": [
+                "ev-service-blueprint",
+                "ev-blueprint-global"
+              ]
+            },
+            ", ",
+            {
+              "id": "so-transformations",
+              "text": "facilitate, and lead large-scale transformations",
+              "evidence": [
+                "ev-franchise",
+                "ev-bayer-journey"
+              ]
+            },
+            ", and ",
+            {
+              "id": "so-op-effectiveness",
+              "text": "increase operational effectiveness",
+              "evidence": [
+                "ev-playbooks",
+                "ev-ops-reform"
+              ]
+            },
+            " with an approach centered on agility and collaboration. Our goal is simple: to position our clients as leaders within their sectors."
+          ]
+        },
+        {
+          "type": "p",
+          "segments": [
+            "The ideal candidate’s experience may include but is not limited to the following:"
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Have experience ",
+            {
+              "id": "so-real-problems-li",
+              "text": "understanding and solving real business problems",
+              "evidence": [
+                "ev-eraf",
+                "ev-franchise"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Have experience with ",
+            {
+              "id": "so-c-suite",
+              "text": "presenting business case and strategy to the C-Suite",
+              "evidence": [
+                "ev-exec-alignment",
+                "ev-delta-pm"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Have experience in ",
+            {
+              "id": "so-assessments",
+              "text": "conducting assessments in different areas that allow organizations a map of where they are and where they may want to go",
+              "evidence": [
+                "ev-service-blueprint",
+                "ev-bayer-journey",
+                "ev-eraf"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "so-root-causes",
+              "text": "Identifying and addressing root causes of operational and strategic issues in organizational and governance structures",
+              "evidence": [
+                "ev-eraf",
+                "ev-system-not-symptom",
+                "ev-org-redesign"
+              ]
+            },
+            "."
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "so-process-initiative",
+              "text": "Led a process improvement initiative, facilitating Current State and Future State documentation, performing a Gap Analysis and creating a plan to achieve desired Future State vision",
+              "evidence": [
+                "ev-ops-reform",
+                "ev-franchise",
+                "ev-blueprint-global"
+              ]
+            },
+            "."
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Been a part of standing up a post merger Integration Management Office and worked leading activities related to 2 organizations coming together"
+          ]
+        },
+        {
+          "type": "p",
+          "segments": [
+            "A career at SEI extends well beyond providing great service and thought leadership to our clients. Everyone takes an active role in building and managing our business, in an environment that runs counter to traditional consulting firms. Our consultants have a “seat at the table” and contribute to growing our business in ways that align to their interests such as growing ",
+            {
+              "id": "so-bizdev",
+              "text": "business development opportunities",
+              "evidence": [
+                "ev-agsage-bizdev"
+              ]
+            },
+            ", ",
+            {
+              "id": "so-interviews",
+              "text": "conducting interviews to support our hiring process",
+              "evidence": [
+                "ev-hiring"
+              ]
+            },
+            ", managing internal initiatives that build our brand or ",
+            {
+              "id": "so-trainings",
+              "text": "organizing trainings to share what you know",
+              "evidence": [
+                "ev-ai-playbook",
+                "ev-training-camp"
+              ]
+            },
+            " with your colleagues. There is no telling what an SEI Consultant will be asked to do on a day-to-day basis – we ",
+            {
+              "id": "so-job-done",
+              "text": "do what it takes to get the job done",
+              "evidence": [
+                "ev-parallel",
+                "ev-nexus"
+              ]
+            },
+            "."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "QUALIFICATIONS"
+        },
+        {
+          "type": "h3",
+          "text": "Required"
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Alignment to our core values: Excellence, Participation, Integrity, and Collaboration"
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Hungry, Humble, Smart"
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "so-acumen",
+              "text": "Demonstrated business and technology acumen",
+              "evidence": [
+                "ev-cdp",
+                "ev-translator",
+                "ev-scad"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "so-comms",
+              "text": "Strong written and verbal communication skills",
+              "evidence": [
+                "ev-writing",
+                "ev-facilitation"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "so-real-problems",
+              "text": "Understanding and experience solving real business problems",
+              "evidence": [
+                "ev-eraf",
+                "ev-franchise",
+                "ev-org-redesign"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "so-results",
+              "text": "Proven track record of delivering results",
+              "evidence": [
+                "ev-org-redesign",
+                "ev-adoption",
+                "ev-site-rebuild"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "so-team",
+              "text": "Experience working with and/or leading a team",
+              "evidence": [
+                "ev-team-builder",
+                "ev-delta-pm",
+                "ev-hiring"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "so-across",
+              "text": "Ability to work across industries, roles, functions & technologies",
+              "evidence": [
+                "ev-industries",
+                "ev-toolstack"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            "Authorization for permanent employment in the United States (this position is not eligible for immigration sponsorship)"
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Preferred"
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "so-degree",
+              "text": "Bachelor’s degree",
+              "evidence": [
+                "ev-scad"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "so-years",
+              "text": "8+ years professional experience",
+              "evidence": [
+                "ev-13yrs"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "segments": [
+            {
+              "id": "so-offerings",
+              "text": "Experience across our service offerings",
+              "evidence": [
+                "ev-decision-tools",
+                "ev-ops-reform",
+                "ev-org-redesign",
+                "ev-service-blueprint"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "segments": [
+            "In compliance with the Massachusetts Transparency Law: This range below is an estimate depending on location, hours, operational needs, education, training, skills, and experience. This job may also be eligible for a discretionary bonus. SEI provides a variety of benefits to employees, including health insurance, dental insurance, vision insurance, a 401(k)-retirement plan, disability insurance, life insurance, paid holidays, paid time off, and paid parental leave benefits."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Boston Pay Range"
+        },
+        {
+          "type": "p",
+          "segments": [
+            "$160,000 - $190,000 USD"
+          ]
+        }
+      ]
+    }
+  ],
   "evidence": {
     "ev-adoption": {
       "title": "2% to 26% adoption in two months",
@@ -121,6 +1304,10 @@
       "text": "An operations playbook that cut resource needs 60%, a startup playbook library that lifted efficiency 80% and removed the CEO from lower-level decisions, and a Fortune 500 AI strategy playbook shipped in 20+ languages.",
       "link": "https://www.hance.work/Platform-Design-Playbook-838ea8da681f4577bce28f0ea7e30b67?pvs=25"
     },
+    "ev-ops-reform": {
+      "title": "A 60% resource reduction",
+      "text": "Reformed the operational systems and org structure at a university logistics startup — a 100,000 square foot warehouse, a 20-truck fleet, and 200+ seasonal staff — then documented the new ways of working into the playbook that propagated across the other campuses. The reform drove a 60% resource reduction."
+    },
     "ev-system-not-symptom": {
       "title": "I solve the system, not the symptom",
       "text": "I will spend an entire day on a single problem — solving the system instead of the symptom — because I know it will save days of time in the future."
@@ -178,583 +1365,5 @@
       "title": "Ten industries, hundreds of personas",
       "text": "Experience across 10+ industries and hundreds of niche personas across unrelated service verticals — film and TV, agriculture, counseling, fitness, hospitality, education, logistics, sports entertainment. The service design and operations skillset transfers to any business domain."
     }
-  },
-  "jd_prose": [
-    {
-      "type": "h2",
-      "text": "WHO WE LOOK FOR"
-    },
-    {
-      "type": "p",
-      "segments": [
-        "An SEI-er is a ",
-        {
-          "id": "p-communicator",
-          "text": "master communicator and active listener who understands how to navigate an audience",
-          "evidence": [
-            "ev-facilitation",
-            "ev-writing",
-            "ev-strengths-coach"
-          ]
-        },
-        ". Self-aware, almost to a fault, SEI-ers keenly understand how to ",
-        {
-          "id": "p-adjust",
-          "text": "adjust their support and problem solving based on the situation",
-          "evidence": [
-            "ev-strengths-coach",
-            "ev-translator"
-          ]
-        },
-        ". Following a logical, fact-based approach, SEI-ers possess the superior ability to ",
-        {
-          "id": "p-correlations",
-          "text": "see correlations others may not, ask the right questions and drive solutions",
-          "evidence": [
-            "ev-eraf",
-            "ev-system-not-symptom",
-            "ev-service-blueprint"
-          ]
-        },
-        "."
-      ]
-    },
-    {
-      "type": "p",
-      "segments": [
-        "As super-connectors, they ",
-        {
-          "id": "p-connector",
-          "text": "connect not only people, but data, trends and experiences",
-          "evidence": [
-            "ev-blueprint-global",
-            "ev-bayer-journey",
-            "ev-translator"
-          ]
-        },
-        ". Mature, humble, and genuine, SEI-ers frequently go above and beyond for both their clients and their colleagues. SEI-ers are ethical and trustworthy individuals who ",
-        {
-          "id": "p-follow-through",
-          "text": "consistently and repeatedly follow through",
-          "evidence": [
-            "ev-budgets",
-            "ev-film-producer"
-          ]
-        },
-        ", and hold true to their values in difficult situations. SEI-ers have an ",
-        {
-          "id": "p-curiosity",
-          "text": "insatiable curiosity and love to learn",
-          "evidence": [
-            "ev-rd-lab",
-            "ev-scad"
-          ]
-        },
-        ". These individuals are commonly ",
-        {
-          "id": "p-tech-savvy",
-          "text": "tech savvy and early adopters",
-          "evidence": [
-            "ev-agentic-personas",
-            "ev-rd-lab",
-            "ev-toolstack"
-          ]
-        },
-        ". Their ",
-        {
-          "id": "p-infectious",
-          "text": "passion for learning is infectious and excites others",
-          "evidence": [
-            "ev-adoption",
-            "ev-facilitation"
-          ]
-        },
-        ". As every project is different, an SEI-er must be ",
-        {
-          "id": "p-adaptable",
-          "text": "adaptable and comfortable with unexpected situations",
-          "evidence": [
-            "ev-ad-replan",
-            "ev-nexus",
-            "ev-industries"
-          ]
-        },
-        ". SEI-ers define ambition differently. They are authentic, low-maintenance individuals who truly enjoy one another- they like to hang out with colleagues outside of work, collaborate and hold one another accountable. SEI-ers enjoy working with genuine, thoughtful folks who want to steer clear of the traditional grind and share the joy of day-to-day life and activities with colleagues, friends, and family."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "WHAT WE DO"
-    },
-    {
-      "type": "p",
-      "segments": [
-        "Our Concept to Delivery consultants work with clients to ",
-        {
-          "id": "p-ideas-to-reality",
-          "text": "turn ideas into reality",
-          "evidence": [
-            "ev-bananas",
-            "ev-agentic-personas",
-            "ev-eaas"
-          ]
-        },
-        ". No matter the size or complexity, our consultants are skilled at ",
-        {
-          "id": "p-concepts-to-results",
-          "text": "helping clients transform concepts into tangible, impactful results",
-          "evidence": [
-            "ev-dryland-scale",
-            "ev-playbooks",
-            "ev-franchise"
-          ]
-        },
-        ". We do this by utilizing innovative approaches to design and deliver engaging, value-focused solutions. Our Concept to Delivery approach demands a ",
-        {
-          "id": "p-people-centric",
-          "text": "people-centric mindset",
-          "evidence": [
-            "ev-scad",
-            "ev-bayer-journey"
-          ]
-        },
-        ", fail-fast mentality, ",
-        {
-          "id": "p-nimble",
-          "text": "nimble decision making",
-          "evidence": [
-            "ev-nexus",
-            "ev-highstakes"
-          ]
-        },
-        ", steadfast innovation, and engaging ",
-        {
-          "id": "p-cross-functional",
-          "text": "cross-functional collaboration",
-          "evidence": [
-            "ev-delta-pm",
-            "ev-translator"
-          ]
-        },
-        "."
-      ]
-    },
-    {
-      "type": "p",
-      "segments": [
-        "We work across a ",
-        {
-          "id": "p-industries",
-          "text": "variety of industries and business functions",
-          "evidence": [
-            "ev-industries",
-            "ev-13yrs"
-          ]
-        },
-        " and provide depth and breadth of experience across numerous strategic capabilities."
-      ]
-    },
-    {
-      "type": "p",
-      "segments": [
-        "We are actively looking for professionals in the following areas:"
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-design-thinking",
-          "text": "Design Thinking",
-          "evidence": [
-            "ev-facilitation",
-            "ev-scad",
-            "ev-decision-tools"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-rapid-prototyping",
-          "text": "Rapid Prototyping",
-          "evidence": [
-            "ev-agentic-personas",
-            "ev-bananas"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-product-management",
-          "text": "Product Management",
-          "evidence": [
-            "ev-site-rebuild",
-            "ev-eaas",
-            "ev-delta-pm"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-solution-delivery",
-          "text": "Solution Delivery",
-          "evidence": [
-            "ev-film-producer",
-            "ev-budgets",
-            "ev-13yrs"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-change-management",
-          "text": "Change Management",
-          "evidence": [
-            "ev-adoption",
-            "ev-franchise",
-            "ev-training-camp"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "p",
-      "segments": [
-        "The ideal candidate’s experience will include elements of the following:"
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        "Providing ",
-        {
-          "id": "p-delivery-leadership",
-          "text": "delivery leadership, and executing on large scale, highly complex initiatives",
-          "evidence": [
-            "ev-blueprint-global",
-            "ev-delta-pm",
-            "ev-film-producer"
-          ]
-        },
-        " by ",
-        {
-          "id": "p-aligning-stakeholders",
-          "text": "aligning key stakeholders, working across various levels of the organization",
-          "evidence": [
-            "ev-exec-alignment",
-            "ev-translator"
-          ]
-        },
-        ", and ",
-        {
-          "id": "p-business-results",
-          "text": "driving business results",
-          "evidence": [
-            "ev-org-redesign",
-            "ev-site-rebuild"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        "Leveraging ",
-        {
-          "id": "p-dt-methods",
-          "text": "design thinking methods to facilitate, articulate, and align on problem definition and solution design",
-          "evidence": [
-            "ev-facilitation",
-            "ev-franchise",
-            "ev-decision-tools"
-          ]
-        },
-        " among business leads, relevant stakeholders, and oftentimes customers."
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        "Developing and adding further detail and fidelity to ",
-        {
-          "id": "p-prototyping",
-          "text": "envisioned solutions through prototyping",
-          "evidence": [
-            "ev-agentic-personas",
-            "ev-bananas"
-          ]
-        },
-        ", often working with the same stakeholders, by leveraging an ",
-        {
-          "id": "p-agile-feedback",
-          "text": "agile approach towards feedback",
-          "evidence": [
-            "ev-scrumboard",
-            "ev-site-rebuild"
-          ]
-        },
-        " to deliver quickly while meeting product goals."
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        "Managing the ",
-        {
-          "id": "p-product-lifecycle",
-          "text": "product lifecycle (e.g., vision, roadmap, budget, pricing, development)",
-          "evidence": [
-            "ev-eaas",
-            "ev-site-rebuild",
-            "ev-agsage-bizdev"
-          ]
-        },
-        ", often by leveraging the collective functions of an enterprise, to deliver solutions that maximize value and minimize time to delivery."
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        "Enabling organizations and its people to ",
-        {
-          "id": "p-adopt-champion",
-          "text": "embrace, adopt, and champion new solutions",
-          "evidence": [
-            "ev-adoption",
-            "ev-ai-playbook",
-            "ev-eraf"
-          ]
-        },
-        " by leveraging effective ",
-        {
-          "id": "p-change-strategies",
-          "text": "change management strategies and methodologies",
-          "evidence": [
-            "ev-training-camp",
-            "ev-franchise"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "p",
-      "segments": [
-        "A career at SEI extends well beyond providing great service and thought leadership to our clients. Everyone takes an active role in building and managing our business, in an environment that runs counter to traditional consulting firms. Our consultants have a “seat at the table” and contribute to growing our business in ways that align to their interests such as growing ",
-        {
-          "id": "p-bizdev",
-          "text": "business development opportunities",
-          "evidence": [
-            "ev-agsage-bizdev"
-          ]
-        },
-        ", ",
-        {
-          "id": "p-interviews",
-          "text": "conducting interviews to support our hiring process",
-          "evidence": [
-            "ev-hiring"
-          ]
-        },
-        ", managing internal initiatives that build our brand or ",
-        {
-          "id": "p-trainings",
-          "text": "organizing trainings to share what you know",
-          "evidence": [
-            "ev-ai-playbook",
-            "ev-training-camp"
-          ]
-        },
-        " with your colleagues. There is no telling what an SEI Consultant will be asked to do on a day-to-day basis – we ",
-        {
-          "id": "p-job-done",
-          "text": "do what it takes to get the job done",
-          "evidence": [
-            "ev-parallel",
-            "ev-nexus"
-          ]
-        },
-        "."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "QUALIFICATIONS"
-    },
-    {
-      "type": "h3",
-      "text": "Required"
-    },
-    {
-      "type": "li",
-      "segments": [
-        "Alignment to our core values: Excellence, Participation, Integrity, and Collaboration"
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        "Hungry, Humble, Smart"
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-acumen",
-          "text": "Demonstrated business and technology acumen",
-          "evidence": [
-            "ev-cdp",
-            "ev-translator",
-            "ev-scad"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-comms",
-          "text": "Strong written and verbal communication skills",
-          "evidence": [
-            "ev-writing",
-            "ev-facilitation"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-real-problems",
-          "text": "Understanding and experience solving real business problems",
-          "evidence": [
-            "ev-eraf",
-            "ev-franchise",
-            "ev-org-redesign"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-results",
-          "text": "Proven track record of delivering results",
-          "evidence": [
-            "ev-org-redesign",
-            "ev-adoption",
-            "ev-site-rebuild"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-team",
-          "text": "Experience working with and/or leading a team",
-          "evidence": [
-            "ev-team-builder",
-            "ev-delta-pm",
-            "ev-hiring"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-across",
-          "text": "Ability to work across industries, roles, functions & technologies",
-          "evidence": [
-            "ev-industries",
-            "ev-toolstack"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        "Authorization for permanent employment in the United States (this position is not eligible for immigration sponsorship)"
-      ]
-    },
-    {
-      "type": "h3",
-      "text": "Preferred"
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-degree",
-          "text": "Bachelor’s degree",
-          "evidence": [
-            "ev-scad"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-years",
-          "text": "8+ years professional experience",
-          "evidence": [
-            "ev-13yrs"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "li",
-      "segments": [
-        {
-          "id": "p-offerings",
-          "text": "Experience across our service offerings",
-          "evidence": [
-            "ev-facilitation",
-            "ev-agentic-personas",
-            "ev-eaas",
-            "ev-film-producer",
-            "ev-adoption"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "p",
-      "segments": [
-        "In compliance with the Massachusetts Transparency Law: This range below is an estimate depending on location, hours, operational needs, education, training, skills, and experience. This job may also be eligible for a discretionary bonus. SEI provides a variety of benefits to employees, including health insurance, dental insurance, vision insurance, a 401(k)-retirement plan, disability insurance, life insurance, paid holidays, paid time off, and paid parental leave benefits."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Boston Pay Range"
-    },
-    {
-      "type": "p",
-      "segments": [
-        "$160,000 - $190,000 USD"
-      ]
-    }
-  ]
+  }
 }

@@ -2,17 +2,23 @@
    SEI Fit Map — renderer
    Pure renderer over data.json. No JD/resume content is
    hardcoded here; edit copy in data.json (or build_data.py).
+   Supports multiple roles as tabs: data.roles is an array of
+   {id, tab_label, job, jd_prose}; evidence is shared.
    ========================================================= */
 (function () {
   "use strict";
 
   var DATA = null;
-  var PHRASES = {};            // id -> phrase segment {id,text,evidence}
+  var ROLES = [];              // data.roles
+  var currentRole = null;      // the role whose JD is on screen
+  var PHRASE_INDEX = {};       // phrase id -> {phrase, roleId} (all roles)
   var activePhraseEl = null;   // currently-selected phrase button
   var lastFocused = null;      // element to restore focus to on close
 
   var el = {
     postingLink:  document.getElementById("posting-link"),
+    roleTabsNav:  document.getElementById("role-tabs-nav"),
+    roleTabs:     document.getElementById("role-tabs"),
     jobTitle:     document.getElementById("job-title"),
     jobLocation:  document.getElementById("job-location-text"),
     kicker:       document.getElementById("candidate-kicker"),
@@ -38,20 +44,104 @@
     })
     .then(function (data) {
       DATA = data;
-      render();
+      // roles array; fall back to a single legacy {job, jd_prose} shape
+      ROLES = data.roles || [{ id: "role", job: data.job, jd_prose: data.jd_prose }];
+      buildPhraseIndex();
+      renderTabs();
+      selectRole(ROLES[0].id, false);
       wireGlobalEvents();
       openFromHash();
     })
     .catch(showLoadError);
 
+  function buildPhraseIndex() {
+    ROLES.forEach(function (role) {
+      (role.jd_prose || []).forEach(function (block) {
+        (block.segments || []).forEach(function (seg) {
+          if (seg && seg.id) PHRASE_INDEX[seg.id] = { phrase: seg, roleId: role.id };
+        });
+      });
+    });
+  }
+
+  // ---------- tabs ----------
+  function renderTabs() {
+    if (ROLES.length < 2) {
+      if (el.roleTabsNav) el.roleTabsNav.hidden = true;
+      return;
+    }
+    el.roleTabs.innerHTML = "";
+    ROLES.forEach(function (role) {
+      var tab = document.createElement("button");
+      tab.className = "role-tab";
+      tab.id = "tab-" + role.id;
+      tab.type = "button";
+      tab.setAttribute("role", "tab");
+      tab.setAttribute("aria-selected", "false");
+      tab.setAttribute("aria-controls", "jd-root");
+      tab.tabIndex = -1;
+      tab.textContent = role.tab_label || (role.job && role.job.role) || role.id;
+      tab.addEventListener("click", function () { selectRole(role.id, true); });
+      tab.addEventListener("keydown", function (e) { onTabKeydown(e, role.id); });
+      el.roleTabs.appendChild(tab);
+    });
+  }
+
+  function onTabKeydown(e, roleId) {
+    var idx = ROLES.findIndex(function (r) { return r.id === roleId; });
+    var next = null;
+    if (e.key === "ArrowRight") next = ROLES[(idx + 1) % ROLES.length];
+    else if (e.key === "ArrowLeft") next = ROLES[(idx - 1 + ROLES.length) % ROLES.length];
+    else if (e.key === "Home") next = ROLES[0];
+    else if (e.key === "End") next = ROLES[ROLES.length - 1];
+    if (next) {
+      e.preventDefault();
+      selectRole(next.id, true);
+      var btn = document.getElementById("tab-" + next.id);
+      if (btn) btn.focus();
+    }
+  }
+
+  function selectRole(roleId, updateHash) {
+    var role = ROLES.find(function (r) { return r.id === roleId; });
+    if (!role || role === currentRole) {
+      if (role && updateHash) setHash(role.id);
+      return;
+    }
+    currentRole = role;
+
+    // tab states
+    ROLES.forEach(function (r) {
+      var tab = document.getElementById("tab-" + r.id);
+      if (!tab) return;
+      var on = r.id === roleId;
+      tab.setAttribute("aria-selected", on ? "true" : "false");
+      tab.classList.toggle("is-selected", on);
+      tab.tabIndex = on ? 0 : -1;
+    });
+
+    closePeek(false, true); // reset the peek; hash is handled below
+    renderHeader();
+    renderProse();
+    if (updateHash) setHash(role.id);
+  }
+
+  function setHash(value) {
+    // default role with no phrase selected keeps a clean URL
+    var clean = (value === ROLES[0].id) ? location.pathname + location.search : "#" + value;
+    if (history.replaceState) history.replaceState(null, "", clean);
+    else location.hash = value;
+  }
+
   // ---------- render ----------
-  function render() {
-    var job = DATA.job || {};
+  function renderHeader() {
+    var job = currentRole.job || {};
 
     if (job.tab_title) document.title = job.tab_title;
 
     if (job.url) {
       el.postingLink.href = job.url;
+      el.postingLink.style.display = "";
     } else {
       el.postingLink.style.display = "none";
     }
@@ -62,14 +152,11 @@
       (job.location || "") + (job.employment ? " · " + job.employment : "");
     el.kicker.textContent = job.candidate_kicker || (DATA.meta && DATA.meta.candidate) || "";
     el.lede.textContent = job.candidate_lede || "";
-
-    renderProse();
-
     el.stat.textContent = job.candidate_stat || "";
   }
 
   function renderProse() {
-    var blocks = DATA.jd_prose || [];
+    var blocks = currentRole.jd_prose || [];
     var frag = document.createDocumentFragment();
     var ulBuffer = null; // collect consecutive <li> blocks into one <ul>
 
@@ -123,7 +210,6 @@
         strong.textContent = seg.b;
         parent.appendChild(strong);
       } else if (seg && seg.id) {
-        PHRASES[seg.id] = seg;
         parent.appendChild(buildPhraseButton(seg));
       }
     });
@@ -219,7 +305,7 @@
     return card;
   }
 
-  function closePeek(restoreFocus) {
+  function closePeek(restoreFocus, keepHash) {
     el.peek.classList.remove("is-open");
     el.peekContent.hidden = true;
     el.peekClose.hidden = true;
@@ -231,9 +317,7 @@
     }
     activePhraseEl = null;
 
-    if (history.replaceState) {
-      history.replaceState(null, "", location.pathname + location.search);
-    }
+    if (!keepHash && currentRole) setHash(currentRole.id);
     if (restoreFocus && lastFocused && document.contains(lastFocused)) {
       lastFocused.focus();
     }
@@ -253,11 +337,22 @@
   function openFromHash() {
     var id = (location.hash || "").replace(/^#/, "");
     if (!id) return;
-    var phrase = PHRASES[id];
+
+    // a role id selects its tab
+    if (ROLES.some(function (r) { return r.id === id; })) {
+      selectRole(id, false);
+      return;
+    }
+
+    // a phrase id switches to its role first, then opens the peek
+    var entry = PHRASE_INDEX[id];
+    if (!entry) return;
+    if (!currentRole || currentRole.id !== entry.roleId) selectRole(entry.roleId, false);
+
     var btn = document.getElementById("phrase-" + id);
-    if (phrase && btn) {
+    if (btn) {
       btn.scrollIntoView({ behavior: "smooth", block: "center" });
-      openPeek(phrase, btn, false);
+      openPeek(entry.phrase, btn, false);
     }
   }
 

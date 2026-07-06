@@ -72,6 +72,45 @@ a { color: var(--s-plum); }
 }
 .posting-link:hover { color: var(--s-red-dk); text-decoration: underline; }
 
+/* ===================== ROLE TABS ===================== */
+.role-tabs {
+  background: var(--s-tint);
+  border-bottom: 1px solid var(--hairline);
+}
+.role-tabs-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+}
+.role-tab {
+  appearance: none;
+  background: transparent;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--secondary);
+  padding: 13px 14px 10px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.role-tab:hover { color: var(--s-ink); }
+.role-tab.is-selected,
+.role-tab[aria-selected="true"] {
+  color: var(--s-ink);
+  border-bottom-color: var(--s-red);
+}
+.role-tab:focus-visible {
+  outline: 3px solid var(--s-peri);
+  outline-offset: -3px;
+  border-radius: 4px;
+}
+
 /* ===================== POSTING HEADER ===================== */
 .posting-header { background: var(--s-ivory); }
 .posting-inner {
@@ -317,6 +356,7 @@ a { color: var(--s-plum); }
   .layout { display: block; padding: 24px 18px 48px; }
   .posting-inner { padding: 26px 18px 6px; }
   .topbar-inner { padding: 14px 18px; }
+  .role-tabs-inner { padding: 0 18px; }
 
   .peek {
     position: fixed;
