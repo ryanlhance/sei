@@ -254,11 +254,6 @@ ctd_prose = [
      ph("p-offerings", "Experience across our service offerings",
         ["ev-facilitation", "ev-agentic-personas", "ev-eaas", "ev-film-producer", "ev-adoption"])]},
 
-  {"type": "p", "segments": [
-    "In compliance with the Massachusetts Transparency Law: This range below is an estimate depending on location, hours, operational needs, education, training, skills, and experience. This job may also be eligible for a discretionary bonus. SEI provides a variety of benefits to employees, including health insurance, dental insurance, vision insurance, a 401(k)-retirement plan, disability insurance, life insurance, paid holidays, paid time off, and paid parental leave benefits."
-  ]},
-  {"type": "h2", "text": "Boston Pay Range"},
-  {"type": "p", "segments": ["$160,000 - $190,000 USD"]},
 ]
 
 # =====================================================================
@@ -436,11 +431,6 @@ so_prose = [
      ph("so-offerings", "Experience across our service offerings",
         ["ev-decision-tools", "ev-ops-reform", "ev-org-redesign", "ev-service-blueprint"])]},
 
-  {"type": "p", "segments": [
-    "In compliance with the Massachusetts Transparency Law: This range below is an estimate depending on location, hours, operational needs, education, training, skills, and experience. This job may also be eligible for a discretionary bonus. SEI provides a variety of benefits to employees, including health insurance, dental insurance, vision insurance, a 401(k)-retirement plan, disability insurance, life insurance, paid holidays, paid time off, and paid parental leave benefits."
-  ]},
-  {"type": "h2", "text": "Boston Pay Range"},
-  {"type": "p", "segments": ["$160,000 - $190,000 USD"]},
 ]
 
 LEDE = "These are selected notes and resume points from Ryan Hance's career experience mapped to SEI's actual job descriptions. Both Boston roles are mapped — use the tabs above to switch between them."

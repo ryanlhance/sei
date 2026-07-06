@@ -41,7 +41,7 @@ That rewrites `data.json` for you and prints a sanity check (phrase count + any 
 
 ## What's on the page
 
-- **Two tabs**, one per SEI role, each showing that posting's real text: **WHO WE LOOK FOR**, **WHAT WE DO**, **QUALIFICATIONS**, and the **Boston Pay Range** — styled to feel like SEI's own site (logo, ivory-and-ink palette, serif headlines, signature red accents). Each tab's "View the live posting" link goes to that role's posting.
+- **Two tabs**, one per SEI role, each showing that posting's real text: **WHO WE LOOK FOR**, **WHAT WE DO**, and **QUALIFICATIONS** — styled to feel like SEI's own site (logo, ivory-and-ink palette, serif headlines, signature red accents). Each tab's "View the live posting" link goes to that role's posting.
 - **Highlighted phrases** you can hover (they show a "clickable" cue) and click.
 - A **side panel** (right on desktop, a bottom sheet on phones) that opens with the evidence behind the clicked phrase — an accomplishment title, the story, and a link to the case study when there is one.
 - A **shareable deep link:** click a phrase and the address bar updates (e.g. `…/#p-tech-savvy`); sending that link opens the page on the right tab with that phrase already expanded. A bare role id (e.g. `…/#so`) opens that tab.
